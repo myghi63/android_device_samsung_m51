@@ -33,7 +33,6 @@ on boot
     write /proc/sys/vm/swappiness 200
     write /proc/sys/vm/watermark_boost_factor 0
     write /proc/sys/vm/watermark_scale_factor 10
-    write /proc/sys/vm/page-cluster 0
 
 
 # Performance
