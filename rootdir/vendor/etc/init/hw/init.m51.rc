@@ -32,8 +32,11 @@ on boot
 # SSWAP
     write /proc/sys/vm/swappiness 180
     write /proc/sys/vm/watermark_boost_factor 0
-    write /proc/sys/vm/watermark_scale_factor 10
+    write /proc/sys/vm/watermark_scale_factor 65
+    write /proc/sys/vm/min_free_kbytes 11584
 
+# Zram
+    write /sys/block/zram0/use_dedup 1
 
 # Performance
     chown radio system /sys/power/cpufreq_min_limit
