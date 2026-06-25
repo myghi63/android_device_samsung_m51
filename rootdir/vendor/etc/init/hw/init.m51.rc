@@ -30,10 +30,11 @@
 
 on boot
 # SSWAP
-    write /proc/sys/vm/swappiness 180
+    write /proc/sys/vm/swappiness 150
     write /proc/sys/vm/watermark_boost_factor 0
-    write /proc/sys/vm/watermark_scale_factor 65
+    write /proc/sys/vm/watermark_scale_factor 150
     write /proc/sys/vm/min_free_kbytes 11584
+    write /proc/sys/vm/vfs_cache_pressure 80
 
 # Zram
     write /sys/block/zram0/use_dedup 1
